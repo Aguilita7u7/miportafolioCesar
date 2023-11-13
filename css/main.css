@@ -273,9 +273,122 @@ bloque @media se aplicarán*/
     .close_icon{
         display: block;
     }
-
-
 }
+
+/*Aqui se trabajara la seccion principal*/
+
+.principal{
+    padding-top: 114px;
+    position: relative;
+    display: block;
+}
+
+.principal_container{
+    align-items: center;
+}
+
+.principal_container h4{
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.principal_container h1{
+    font-size: 40px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+    white-space: nowrap;/*Evitas que el texto se divida en múltiples líneas automáticamente.
+    El texto se mostrará en una sola línea y no se permitirá que se "envuelva" a la siguiente línea, independientemente del ancho del contenedor.
+    Esto es útil cuando tienes contenido que debe mostrarse en una sola línea sin permitir saltos de línea, como en títulos largos, nombres, o cualquier texto que sea preferible que no se separe en múltiples líneas.*/
+    margin-bottom: 10px;
+    color: var(--title-color);
+}
+
+.principal_container p{
+    margin: 10px 0 40px;
+    color: #333;
+    font-size: 18px;
+}
+
+.principal_container .btn{
+    margin-top: 30px;
+    display: inline-flex;/*La combinación de ambas crea un contenedor flexible que
+     se comporta como un elemento en línea. Esto es útil cuando se desea aplicar las 
+     propiedades de Flexbox a elementos que se distribuyen en línea, lo que permite 
+     alinearlos y distribuirlos de manera flexible en el espacio disponible.*/
+    align-items: center;
+}
+
+.principal_social{
+    display: flex;
+    column-gap: 20px;/*se utiliza para establecer el espacio entre las columna*/
+}
+
+.principal_social a{
+    font-size: 22px;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    color: #333;
+    transition: .3s;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.principal_social a:hover{
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.principal_img{
+    text-align: left;
+}
+
+@media screen and (max-width: 768px){
+    .principal_content h4{
+            font-size: 16px;
+    }
+    .principal_content h1{
+        font-size: 32px;
+    }
+
+    .principal_content p{
+        font-size: 15px;
+}
+}
+
+@media screen and (max-width: 576px){
+    .principal_container{
+        grid-template-columns: 1fr;/*se utiliza en CSS Grid Layout para definir el 
+        tamaño y la distribución de las columnas en un contenedor de rejilla.*//*Cuando
+         se define con 1fr, la columna se expandirá para llenar todo el espacio 
+         disponible horizontalmente en el contenedor de la rejilla.*/
+        row-gap: 2rem;/*Establece espacio entre lineas de 2 rem*/
+        justify-content: center;
+    }
+
+    .principal_content{
+        order: 2;/*La propiedad CSS order se utiliza en Flexbox y CSS Grid para 
+        controlar el orden de los elementos secundarios dentro de un contenedor 
+        flexible o una cuadrícula. Por defecto, los elementos se muestran en el orden 
+        en que aparecen en el HTML, pero order permite cambiar este orden visualmente
+         sin modificar la estructura del DOM.*/
+        text-align: center;
+    }
+
+    .principal_social{
+        justify-content: center;
+    }
+    .principal_img{
+        text-align: center;
+    }
+}
+
+
 
 
 
