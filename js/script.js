@@ -76,3 +76,47 @@ if (typed){
         backDelay: 2000
     })
 }
+
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive (){
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 50;
+        
+        let sectionId = section.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.menu a[href *=' + sectionId + ']').classList.add('active-link');
+        }else{
+            document.querySelector('.menu a[href *=' + sectionId + ']').classList.remove('active-link');
+        }
+    })
+}
+
+windows.addEventListener('scroll', scrollActive);
+
+const pages = document.querySelectorAll('.page');
+const resume = document.querySelector('.resume');
+
+function resumeActive(){
+    const scrollY = window.pageXOffset;
+
+    pages.forEach(page => {
+        const sectionHeight = page.offsetHeight;
+        const sectionTop = page.offsetTop - 120;
+
+        let sectionid = page.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.resume_tabs a[href *=' + sectionid + ']').classList.add('current');
+        }else{
+            document.querySelector('.resume_tabs a[href *=' + sectionid + ']').classList.remove('current');
+
+        }
+    })
+}
+
+window.addEventListener('scroll',resumeActive);
