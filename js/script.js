@@ -80,7 +80,7 @@ if (typed){
 const sections = document.querySelectorAll('section[id]');
 
 function scrollActive (){
-    const scrollY = window.pageYOffset;
+    const scrollY = window.scrollY;
 
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
@@ -98,11 +98,16 @@ function scrollActive (){
 
 windows.addEventListener('scroll', scrollActive);
 
-const pages = document.querySelectorAll('.page');
-const resume = document.querySelector('.resume');
+
+/*
+const pages = document.querySelectorAll('.resume_content > div');
+//const pages = document.querySelectorAll('.page');
+//const resume = document.querySelector('.resume');
+const resumeSections = resume.querySelectorAll('.resume_content > div');
+
 
 function resumeActive(){
-    const scrollY = window.pageXOffset;
+    const scrollY = window.scrollY;
 
     pages.forEach(page => {
         const sectionHeight = page.offsetHeight;
@@ -119,4 +124,29 @@ function resumeActive(){
     })
 }
 
-window.addEventListener('scroll',resumeActive);
+window.addEventListener('scroll',resumeActive);*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.resume_wrap');
+    const menuItems = document.querySelectorAll('.resume_tabs ul li a');
+  
+    function highlightMenuItem() {
+      let scrollPosition = window.scrollY || window.pageYOffset;
+  
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionBottom = sectionTop + section.offsetHeight;
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          // Resaltar la sección actual en el menú
+          menuItems[index].classList.add('current');
+        } else {
+          // Quitar el resaltado si no está en la sección actual
+          menuItems[index].classList.remove('current');
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', highlightMenuItem);
+  });
+  

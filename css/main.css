@@ -24,7 +24,7 @@ background-color: blue;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--main-color); /* Color del 'pulgarcito' de la barra de desplazamiento */
+    background: black; /* Color del 'pulgarcito' de la barra de desplazamiento */
     border-radius: 10px;
 }
 
@@ -44,7 +44,7 @@ body{
     min-height: 100vh; /*establece la altura mínima que un elemento debe tener.*/
     height: 1000px;
     overflow-x: hidden; /* Ocultar cualquier desbordamiento horizontal */
-    position:relative;
+    position: relative;
 }
 
 a {
@@ -100,7 +100,8 @@ adecuada al contenedor que las rodea.*/
     text-align: center;
     font-size: 36px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: capitalize;/*lo que hace es convertir la primera letra de cada 
+    palabra a mayúscula, mientras que las letras restantes se convierten a minúsculas.*/
     line-height: .8; /* Altura de línea del 80% del tamaño de la fuente */
     color: #222;
     position: relative;
@@ -346,6 +347,7 @@ bloque @media se aplicarán*/
 
 .principal_img{
     text-align: left;
+   
 }
 
 @media screen and (max-width: 768px){
@@ -393,23 +395,26 @@ bloque @media se aplicarán*/
 .profile-info {
     margin-bottom: 25px;
 }
-
+/*Esta IMG es cuando se haga chiquita la pantaslla*/
 .profile-img {
-    width: 80%;
+    width: 60%;
     max-width: 300px;
 }
 
 .profile-img-section {
     position: relative;
+    padding: 0 70px 0 0;
+    width: 1110px;
 }
 
 .profile-img-line {
     background-color: var(--main-color);
     height: 15px;
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0;
     bottom: 0;
+    padding: 0 70px 0 0;
 }
 
 .profile {
@@ -417,7 +422,6 @@ bloque @media se aplicarán*/
 }
 
 .profile-title{
-    font-size: 35px;
     font-weight: bold;
     margin: 0;
     color: var(--primary-color);
@@ -455,7 +459,7 @@ bloque @media se aplicarán*/
     .profile-img {
         width: 100%;
         max-width: 900px;
-
+       
     }
         
     .profile {
@@ -468,7 +472,7 @@ bloque @media se aplicarán*/
     }
     
     .profile-title{
-        font-size: 60px;
+        font-size: 45px;
     }
     
     .profile-details {
@@ -514,24 +518,27 @@ bloque @media se aplicarán*/
 }
 
 .resume_tabs ul{
-    position: sticky;
+    position: sticky;/*Mantiene "Pegado a la pantalla el menu xd*/
     top:150px;
-    position: -webkit-sticky;
+    position: -webkit-sticky;/*Esti garantiza que funcione con el sticky*/
 }
 
 .resume_tabs ul li a{
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: block;
+    font-weight: 700; /*que tan negrito queremos que se vea el lemento*/
+    margin-bottom: 10px; /*Separacion de los elementos */
+    display: block;/*Si fueran cajas, estas se apilarian verticalmente, si es 
+    inline no respetean medidas y su es inline-block se aplian horizonte*/
     color: #222;
-    position: relative;
+    position: relative;/*posicion en como se van a ajustar los elementos*/
     transition: .3s;
+    
 }
 
 .resume_tabs ul li a.current{
     color: var(--main-color);
     margin-left: 20px;
     position: relative;
+
 }
 
 .resume_tabs ul li a.current::before{
@@ -543,27 +550,30 @@ bloque @media se aplicarán*/
     width: 30px;
     height: 2px;
     background-color: var(--main-color);
+    
 }
 
 .page{
-    margin-bottom: 70px;
+    margin-bottom: 70px;/*Esta madre separa cada una de las secciones entre si. Haciendo
+    el espacio entre ellas mas grande*/
 }
 
 .page_heading{
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 25px; /*Tama;o de la letra inutil*/
+    font-weight: 600; /*que tan negrito queremos que se vea el lemento*/
     color: var(--title-color);
     margin-bottom: 25px;
 }
 
 
 .resume_wrap{
-    background-color: #faf9ff;
-    margin-bottom: 15px;
-    padding: 40px 30px;
-    display: flex;
+    background-color: #B0E8EE ;
+    margin-bottom: 15px; /*/Mierda para separ elementos*/
+    padding: 40px 30px; /*Esta mierda expande los elementos desde dentro del 
+    elemento en si*/
+    display: flex; /*Hace que el contenido quede al lado del icono en vez de abajo*/
     position: relative;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: .3s;
 }
 
@@ -574,14 +584,13 @@ bloque @media se aplicarán*/
     height: 50px;
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*Centra solo el incono, el circulo naranja no se mueve*/
+    justify-content: center; /*Tambien centra el iconito*/
 }
 
 .resume_wrap-icon i{
-    font-size: 25px;
+    font-size: 25px; /*tama;o del iconito*/
     color: #fff;
-
 }
 
 .resume_wrap-content{
@@ -602,10 +611,11 @@ bloque @media se aplicarán*/
     color: var(--subtitle-color);
     font-size: 14px;
     font-weight: 400;
+    
 }
 
 .resume_wrap-content p{
-    color: var(--subtitle-color);
+    color: black;
     font-size: 14px;
     margin-top: 15px;
 }
@@ -697,6 +707,91 @@ bloque @media se aplicarán*/
         grid-template-columns: 1fr;
     }
 }
+
+/*Aqui empezaria mi footer*/
+.footer{
+    background-color: #B0E8EE ;
+    margin-bottom: 15px; /*/Mierda para separ elementos*/
+    padding: 50px;/*Esta mierda expande los elementos desde dentro del 
+    elemento en si*/    
+}
+
+.redes_sociales{
+    background-color: #B0E8EE;
+    padding: 50px;
+}
+
+.redes_sociales p{
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    padding-bottom: 0 0 95px 0;
+}
+
+.redes_sociales a{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;/*lo que hace es convertir la primera letra de cada 
+    palabra a mayúscula, mientras que las letras restantes se convierten a minúsculas.*/
+    line-height: .8; /* Altura de línea del 80% del tamaño de la fuente */
+    color: #222;
+    position: relative;
+    padding: 50px 50px 50px 50px;
+    background-color: red;
+    display: inline-block;
+    margin-left: 180px;
+}
+
+/* Esta es la parte del footer */
+
+.footer_bg{
+    background-color: #B0E8EE;
+    padding-top: 30px;
+}
+
+.footer_container{
+    text-align: center;
+}
+
+.main_footer{
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    color: black;
+}
+
+.footer_social{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.footer_social a {
+    background-color: #fff;
+    color: var(--title-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.footer_social a:hover{
+    background-color: var(--main-color);
+}
+
+.footer_copy{
+    padding: 20px 0;
+    color: black;
+    font-weight: 700;
+}
+
+
 
 
 

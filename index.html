@@ -12,7 +12,7 @@
 <body>
     <header id="header">
         <div class="container">
-            <a href="img/body-part-abs.png" alt="Foto del Perfil" class="img-fluis"></a>
+            <a href="img/body-part-abs.png" alt="Foto del Perfil" class="img-fluid"></a>
             <ul class="menu">
                 <li class="menu_item">
                     <a href="#hero" class="menu_link active-link">Home</a>
@@ -86,15 +86,15 @@
             <div class="resume_container container grid">
                 <div class="resume_tabs">
                     <ul>
-                        <li><a href="#page-1">Educacion</a></li>
-                        <li><a href="#page-1">Experiencia</a></li>
-                        <li><a href="#page-1">Habilidades</a></li>
+                        <li><a href="#page-1" class="current">Educacion</a></li>
+                        <li><a href="#page-2">Experiencia</a></li>
+                        <li><a href="#page-3">Habilidades</a></li>
                     </ul>
                 </div>
                 <div class="resume_content">
                     <div id="page-1" class="page one">
                         <div class="page_heading">Educacion</div>
-                        <div class="resume_wrap">
+                        <div class="resume_wrap"><!-- Este es la cajita color chichle, solo la caja -->
                             <div class="resume_wrap-icon">
                                <i class="uil uil-graduation-cap"></i>
                             </div>
@@ -259,16 +259,32 @@
 
     </main>
 
-    <footer>
-        <!-- Tu pie de página dd-->
+    <footer class="footer">
+      <div class="footer_bg">
+        <div class="footer_container container">
+            <div class="main_footer">
+                <div class="footer_social">
+                    <a href="#"><ion-icon name="logo-github"></a>
+                    <a href="#"><ion-icon name="logo-facebook"></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                </div>
+                <h3>Espero verte pronto....</h3>
+                <p>Gracias por visitar mi portafolio personal, por favor no dudes
+                   en buscarme en mis redes sociales.
+                </p>
+            </div>
+            <div class="footer_copy">&#169; UTNA. Todos los derechos reservados</div>
+        </div>
+      </div>
+        
     </footer>
 
 
   <!-- Iconos -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<!-- Escritura automatica -->
-<script src="js/typed.umd.js"></script>
+    <!-- Escritura automatica -->
+    <script src="js/typed.umd.js"></script>
 
 <script src="js/script.js"></script> <!-- Enlace al archivo JavaScript -->
 
