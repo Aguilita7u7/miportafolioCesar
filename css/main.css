@@ -1,4 +1,4 @@
-*{
+* {
     margin:0;
     padding:0;
     box-sizing: border-box; /*El tama;o del elemento se mantiene constante*/
@@ -32,7 +32,7 @@ background-color: blue;
 
 :root{
     --main-color: #ff7b00ea;
-    --seconde-color: #ff7b00ea;
+    --seconde-color: #ffe0c3ea;
     --title-color: #222;
     --subtitle-color: #8d8d8d;
 }
@@ -147,7 +147,7 @@ cuadrícula de dos columnas de igual ancho, con un espacio de separación entre 
 }
 
 /*Aqui empieza el Header*/
-header{ 
+header { 
     position: fixed;
     width: 100%;
     padding: 20px 0;
@@ -157,9 +157,9 @@ header{
      de contenido.*/
 }
 
-header .active {
+header.active {
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,15);
+    box-shadow: 0 5px 10px rgba(0,0,0,.15);
 }
 
 header .container {
@@ -168,25 +168,25 @@ header .container {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     width: 150px;
     height: auto;
     display: flex;
     align-items: center;
 }
 
-.menu{
+.menu {
     white-space: nowrap;
     transition: .5s;
     z-index: 999;
     position: relative;
 }
 
-.menu_item{
+.menu_item {
     display: inline-block;
 }
 
-.menu_link{
+.menu_link {
     padding: 5px 10px;
     position: relative;
     transition: .4s;
@@ -194,7 +194,7 @@ header .container {
     font-weight: 500;
 }
 
-.menu_link::before{
+.menu_link::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -203,14 +203,14 @@ header .container {
     height: 2px;
     background-color: var(--main-color);
     transform: scale(0);
-    transition: 4s;
+    transition: .4s;
 }
 
-.menu_link:hover{
+.menu_link:hover {
     color: var(--main-color);
 }
 
-.active-link{
+.active-link {
     color: var(--main-color);
 }
 
@@ -219,18 +219,18 @@ header .container {
     transform: scale(1);
 }
 
-.close_icon{
+.close_icon {
     font-size: 25px;
     position: absolute;
     top: 30px;
     right: 250px;
     z-index: 1000;
     color: var(--main-color);
-    cursor:pointer;
+    cursor: pointer;
     display: none;
 }
 
-.toggle_icon{
+.toggle_icon {
     font-size: 32px;
     display: none;
     cursor: pointer;

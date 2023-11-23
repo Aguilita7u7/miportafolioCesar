@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           // Resaltar la sección actual en el menú
-          menuItems[index].classList.add('current');
+          menuItems[index].classList.toggle('current');
         } else {
           // Quitar el resaltado si no está en la sección actual
           menuItems[index].classList.remove('current');
