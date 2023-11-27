@@ -77,6 +77,7 @@ if (typed){
     })
 }
 
+/*Funcion para que el menu se ilumine al pasar la pagina*/
 const sections = document.querySelectorAll('section[id]');
 
 function scrollActive (){
@@ -96,7 +97,7 @@ function scrollActive (){
     })
 }
 
-windows.addEventListener('scroll', scrollActive);
+window.addEventListener('scroll', scrollActive);
 
 
 /*
@@ -125,7 +126,7 @@ function resumeActive(){
 }
 
 window.addEventListener('scroll',resumeActive);*/
-
+/*
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.resume_wrap');
     const menuItems = document.querySelectorAll('.resume_tabs ul li a');
@@ -149,4 +150,5 @@ document.addEventListener('DOMContentLoaded', function () {
   
     window.addEventListener('scroll', highlightMenuItem);
   });
+*/
   
