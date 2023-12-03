@@ -1,3 +1,5 @@
+
+
 const iconToggle = document.querySelector('.toggle_icon');
 const navbarMenu = document.querySelector('.menu');
 const menuLinks = document.querySelectorAll('.menu_link');
@@ -99,6 +101,16 @@ function scrollActive (){
 
 window.addEventListener('scroll', scrollActive);
 
+/*Codigos JS para el carrucel pops*/
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    });
+});
+
 
 /*
 const pages = document.querySelectorAll('.resume_content > div');
@@ -151,4 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', highlightMenuItem);
   });
 */
+
+
   

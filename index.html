@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>César Said Castorena Herrera</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!-- SWIPER JS PARA LOS TESTIMONIOS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Enlaza tu archivo CSS externo -->
     <script defer src="js/app.js"></script>
 </head>
@@ -27,7 +29,7 @@
                     <a href="#resume" class="menu_link">Resumen</a>
                 </li>
                 <li class="menu_item">
-                    <a href="#page-3" class="menu_link">Habilidades</a>
+                    <a href="#testimonios" class="menu_link">Reseñas</a>
                 </li>
                 <li class="menu_item">
                     <a href="#contact" class="menu_link">Contacto</a>
@@ -62,10 +64,10 @@
         </section>
 
   <!-- Esta es la seccion de informacion -->
-        <div class="horizontal-padding vertical-padding" id="info">
+        <div class="horizontal-padding vertical-padding">
             <section class="profile">
                 <div class="profile-info">
-                    <h1 class="profile-title">Mi nombre es <br/>César Said </h1>
+                    <h1 class="profile-title" id="info">Mi nombre es <br/>César Said </h1>
                     <p class="profile-detalis">
                         Soy un desarrollador de software con conocimiento en varios lenguajes  
                         de programación que cursó la carrera de Ingeniería en Desarrollo
@@ -184,77 +186,129 @@
                             </div>
                         </div>
                     </div>
-                    <div id="page-3" class="page three">
-                        <div class="page_heading">Habilidades</div>
-                      <div class="progressBoxs grid">
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>HTML</span>
-                                <span>15%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 15%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>Microsoft Word</span>
-                                <span>30%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 30%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>CSS</span>
-                                <span>15%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 15%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>JavaScript</span>
-                                <span>30%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 30%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>JQuery</span>
-                                <span>20%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 20%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>Microsoft Excel</span>
-                                <span>30%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 30%;"></div>
-                            </div>
-                        </div>
-                        <div class="progressBox">
-                            <div class="progress_name">
-                                <span>C#</span>
-                                <span>30%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress_bar" style="width: 30%;"></div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
                 </div>
             </div>
         </section>
+
+         <!-- Aqui haremos la seccion de Reseñas -->
+
+         <section class="resenas" id="testimonios">
+            <h1 class="section_title">Reseñas</h1>
+            <div class="contenedor swiper">
+                <div class="carrucel swiper-wrapper">
+                    <div class="resena swiper-slide">
+                        <div class="head">
+                            <div class="area-perfil">
+                                <div class="avatar">
+                                    <img src="img/tonystank.png">
+                                </div>
+                                <div class="info">
+                                    <h4>Tony Stark</h4>
+                                    <small>Ingeniero en Mecanica</small>
+                                </div>
+                            </div>
+                           <div class="estrellas">
+                            <ion-icon src="img/star-outline.svg"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                           </div> 
+                        </div>
+                        <p>
+                            Yo pongo mi total confianza en el desarrollador Cesar ya que
+                            hemos trabajado de la mano para poder crear una de mis armaduras 
+                            mas avanzadas. Alta confianza con el.
+                        </p>
+                    </div>
+                       <!-- Aqui termina un testimonio -->
+                       <div class="resena swiper-slide">
+                        <div class="head">
+                            <div class="area-perfil">
+                                <div class="avatar">
+                                    <img src="img/licenciado.jpg">
+                                </div>
+                                <div class="info">
+                                    <h4>Lic. Carvajal</h4>
+                                    <small>Ingeniero Industrial</small>
+                                </div>
+                            </div>
+                           <div class="estrellas">
+                            <ion-icon src="img/star-outline.svg"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                           </div> 
+                        </div>
+                        <p>
+                            Yo recomiendo contratar a Cesar ya que el es una persona
+                            responsable en su trabajo que cuenta con el conocimiento
+                            y con los valores que se necesitan en una compañia de 
+                            renombre.
+                        </p>
+                    </div>
+                       <!-- Aqui termina un testimonio -->
+                       <div class="resena swiper-slide">
+                        <div class="head">
+                            <div class="area-perfil">
+                                <div class="avatar">
+                                    <img src="img/chapo.jpg">
+                                </div>
+                                <div class="info">
+                                    <h4>El Chapis</h4>
+                                    <small>Ingeniero en Mercadotecnia</small>
+                                </div>
+                            </div>
+                           <div class="estrellas">
+                            <ion-icon src="img/star-outline.svg"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                           </div> 
+                        </div>
+                        <p>
+                            Creanme cuando les digo que el es un sujeto en el que se 
+                            puede confiar, ya que con sus habilidades de ha salvado
+                            de la DEA en numerosas ocaciones.
+                        </p>
+                    </div>
+                       <!-- Aqui termina un testimonio -->
+                       <div class="resena swiper-slide">
+                        <div class="head">
+                            <div class="area-perfil">
+                                <div class="avatar">
+                                    <img src="img/abogado.jpg">
+                                </div>
+                                <div class="info">
+                                    <h4>Luis Cervantes</h4>
+                                    <small>Lic. en Derecho</small>
+                                </div>
+                            </div>
+                           <div class="estrellas">
+                            <ion-icon src="img/star-outline.svg"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                           </div> 
+                        </div>
+                        <p>
+                            Yo recomiendo contratar a Cesar ya que hemos trabajado
+                            juntos en la realizacion de varios proyectos y puedo decir
+                            que es dedicado en su trabajo.
+                        </p>
+                    </div>
+                       <!-- Aqui termina un testimonio -->
+                </div>
+                <div class="swiper-scrollbar">
+                    <div class="swiper-scrollbar-drag"></div>
+                </div>
+            </div>
+         </section>
+
+
 
         <!-- Seccion contactame -->
         <section class="contact" id="contact">
@@ -267,7 +321,7 @@
                         <input type="email" name="Email" placeholder="Correo:" required>
                         <input type="text" name="Subject" placeholder="Tema:" required>
                         <textarea name="Message" placeholder="Mensaje:" required></textarea>
-                        <input type="submit" value="Submit" class="btn">
+                        <input type="submit" value="Enviar" class="btn">
                     </form>
                 </div>
             </div>
@@ -302,6 +356,11 @@
     <script src="js/typed.umd.js"></script>
 
 <script src="js/script.js"></script> <!-- Enlace al archivo JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Incluye la biblioteca Swiper a través de CDN -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>
