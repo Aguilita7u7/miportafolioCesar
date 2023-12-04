@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!-- SWIPER JS PARA LOS TESTIMONIOS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Enlaza tu archivo CSS externo -->
-    <script defer src="js/app.js"></script>
+    <link rel="manifest" href="manifest.json"> <!--Enlaze al archivo manifiesto-->
+    <script>
+      if ("serviceWorker" in navigator) 
+      {
+         navigator.serviceWorker.register("sw.js");
+      }
+    </script>
 </head>
 
 <body>
@@ -361,6 +367,9 @@
 <!-- Incluye la biblioteca Swiper a través de CDN -->
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Incluye la biblioteca Swiper a través de CDN -->
+<!--<script src="reg_serviceworker.js"></script>-->
 
 </body>
 </html>
